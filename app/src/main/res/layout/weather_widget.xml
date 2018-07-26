@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical">
+
+    <TextClock
+        android:id="@+id/tc_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format12Hour="@string/keyguard_widget_12_hours_format"
+        android:format24Hour="@string/keyguard_widget_24_hours_format"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:fontFamily="widget_custom"
+        android:textSize="@dimen/widget_time" />
+
+    <LinearLayout
+        android:id="@+id/ll_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-5dp"
+        android:layout_below="@+id/tc_time"
+        android:orientation="horizontal">
+
+        <TextClock
+            android:id="@+id/tc_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:format24Hour="MM月 dd日 "
+            android:format12Hour="MM月 dd日 "
+            android:textColor="@color/white"
+            android:layout_below="@+id/tc_time"
+            android:textSize="@dimen/widget_common" />
+
+        <TextView
+            android:id="@+id/tv_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/widget_common" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/widget1_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_date"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:text="@string/widget_no_data"
+        android:textColor="@color/white"
+        android:textSize="@dimen/widget_common" />
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">天气</string>
+    <string name="widget_weather_deskclock">天气和时钟</string>
+    <string name="widget1_weather">天气</string>
+</resources>

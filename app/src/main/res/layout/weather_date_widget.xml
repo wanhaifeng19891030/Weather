@@ -1,0 +1,228 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_widget_weather_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/weather_widget_bg">
+
+    <ImageView
+        android:id="@+id/widget_weather_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/widget_big_1"/>
+
+    <TextView
+        android:id="@+id/widget_weather_aqi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/widget_color"
+        android:textSize="@dimen/widget_weather"
+        android:layout_below="@+id/widget_weather_icon"
+        android:layout_centerHorizontal="true"
+        android:text="@string/N_A"/>
+
+     <RelativeLayout
+         android:id="@+id/rl_widget_date_week_temp"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="15dp"
+         android:layout_marginStart="20dp"
+         android:layout_marginEnd="20dp"
+         android:layout_below="@+id/widget_weather_aqi">
+
+         <TextClock
+             android:id="@+id/textclock"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:format24Hour="HH:mm\r\nMM月dd日 "
+             android:format12Hour="hh:mm\r\nMM月dd日 "
+             android:textSize="@dimen/widget_weather"
+             android:textColor="@color/widget_color"/>
+
+         <TextView
+             android:id="@+id/widget_week"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="5dp"
+             android:textSize="@dimen/widget_weather"
+             android:textColor="@color/widget_color"
+             android:layout_toRightOf="@+id/textclock"
+             android:layout_alignBottom="@+id/textclock"/>
+
+         <TextView
+             android:id="@+id/widget_city"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="5dp"
+             android:textSize="@dimen/widget_weather"
+             android:text="@string/placeholder"
+             android:layout_toRightOf="@+id/widget_week"
+             android:layout_alignBottom="@+id/widget_week"/>
+
+        <TextView
+            android:id="@+id/widget_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/widget_color"
+            android:textSize="@dimen/widget_temp"
+            android:text="@string/placeholder4"/>
+     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/widget_line"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="8dp"
+        android:layout_below="@+id/rl_widget_date_week_temp"
+        android:background="@color/widget_color"/>
+
+    <LinearLayout
+        android:id="@+id/future_three_day_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/widget_line"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/widget_future_day0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/N_A"
+                android:textSize="@dimen/widget_common"
+                android:textColor="@color/widget_color"/>
+
+            <ImageView
+                android:id="@+id/widget_future_icon0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/widget_1"
+                android:layout_below="@+id/widget_future_day0" />
+
+            <TextView
+                android:id="@+id/widget_future_lowHighTemp0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/widget_future_icon0"
+                android:text="@string/placeholder5"
+                android:textSize="@dimen/widget_common"
+                android:textColor="@color/widget_color"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/widget_future_day1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/N_A"
+                android:textSize="@dimen/widget_common"
+                android:textColor="@color/widget_color"/>
+
+            <ImageView
+                android:id="@+id/widget_future_icon1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/widget_1"
+                android:layout_below="@+id/widget_future_day1"/>
+
+            <TextView
+                android:id="@+id/widget_future_lowHighTemp1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/widget_future_icon1"
+                android:text="@string/placeholder5"
+                android:textSize="@dimen/widget_common"
+                android:textColor="@color/widget_color"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/widget_future_day2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/N_A"
+                android:textSize="@dimen/widget_common"
+                android:textColor="@color/widget_color"/>
+
+            <ImageView
+                android:id="@+id/widget_future_icon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/widget_1"
+                android:layout_below="@+id/widget_future_day2"/>
+
+            <TextView
+                android:id="@+id/widget_future_lowHighTemp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/widget_future_icon2"
+                android:text="@string/placeholder5"
+                android:textSize="@dimen/widget_common"
+                android:textColor="@color/widget_color"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/widget_future_day3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/N_A"
+                android:textSize="@dimen/widget_common"
+                android:textColor="@color/widget_color"/>
+
+            <ImageView
+                android:id="@+id/widget_future_icon3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/widget_1"
+                android:layout_below="@+id/widget_future_day3"/>
+
+            <TextView
+                android:id="@+id/widget_future_lowHighTemp3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/widget_future_icon3"
+                android:text="@string/placeholder5"
+                android:textSize="@dimen/widget_common"
+                android:textColor="@color/widget_color"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
