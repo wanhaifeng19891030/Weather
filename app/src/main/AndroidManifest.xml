@@ -102,10 +102,10 @@
 
         <meta-data
             android:name="app_key"
-            android:value="C7oao0k05dfdpe51i7x1" />
+            android:value="自己的百度APP_KEY" />
         <meta-data
             android:name="secret_key"
-            android:value="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2stqt2uNPp2zZp7+oYpeEPq84yB0t/ot8zT3k32UwgFmp+QnFFtMWbdIH0NYMeT9cq8a4Z8LAA/E+Zpjk/rtXwKNwY5baxryupenEJLo23u9qYUj9srlVmbCoy431ct8PxIw9rXInmTzZdoOTdakgwnNojxm8ZR70l7M5wTJExQIDAQAB" />
+            android:value="自己百度的SECRET_KEY" />
     </application>
 
 </manifest>
